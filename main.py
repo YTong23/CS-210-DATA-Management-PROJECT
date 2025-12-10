@@ -15,7 +15,7 @@ def main():
     init_db()
 
     latest = get_latest_block_number()
-    start = latest - 3000
+    start = latest - 300
     records = extract_blocks_range(start, latest)
 
     df_blocks = records_to_dataframe(records)
@@ -46,3 +46,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
